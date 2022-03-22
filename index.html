@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Mon super site</title>
+    <meta charset='utf-8' />
+    <meta name="description" content="une description pour les robots de Google" />
+    <meta name="author" content="Bastien ROUSSEL" />
+</head>
+
+<body>
+    <!-- EN TETE - NAVBAR -->
+    <header>
+        <h1>Le Nom de mon site !</h1>
+        <nav>
+            <ul>
+                <!-- LE PREMIER LIEN S'OUVRIRE DANS UN NOUVEL ONGLET -->
+                <li> <a href="https://google.fr" target="_blank"> MENU 1 </a></li>
+                <li> <a href="https://google.fr"> MENU 2 </a></li>
+                <li> <a href="https://google.fr"> MENU 2 </a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- PREMIERE SECTION : UN FORMULAIRE -->
+    <section>
+        <h2> UN FORMULAIRE DE SAISIE UTILSATEUR</h2>
+        <form action="uneActionNonDefinie" method="POST" id="monFormulaireContact">
+
+            <!-- NOM / PRÉNOM : saisie obligatoire -->
+            <label>Nom / Prénom : </label>
+            <input type="text" required/>
+            <br />
+
+            <!-- DATE DE NAISSANCE : un calendrier -->
+            <label>Date de naissance : </label>
+            <input type="date" />
+            <br />
+
+            <!-- AGE : un number -->
+            <label> Age : </label>
+            <input type="number" />
+            <br />
+
+            <!-- ADRESSE EMAIL : avec un placeholder (= un exemple de saisie)-->
+            <label>Mail : </label>
+            <input type="email" placeholder="mon.mail@iut.fr" />
+            <br />
+
+            <!-- ANIMAL FAVORI : une sélection d'animaux prédéfinie -->
+            <label>Quel est votre animal favori ? </label>
+            <select>
+                <option>L'étudiant</option>
+                <option>Le loup</option>
+                <option>Le gorille</option>
+                <option>Le serpent</option>
+            </select>
+            <br />
+
+            <!-- HTML ADDICT ? Oui on non, mais pas les deux. Pour cela, il faut préciser un 'name' -->
+            <label>Aimez-vous le HTML ?</label>
+            <input type="radio" name="htmlFan" checked /> <label>OUI</label>
+            <input type="radio" name="htmlFan" /> <label>NON</label>
+            <br />
+
+            <!-- ZONE DE SAISIE : multiligne -->
+            <textarea rows="10">Du texte par défaut que l'utilisateur va pouvoir remplacer
+            </textarea>
+
+            <!-- CGU : une case à cocher -->
+            <input type="checkbox" /> <label>En cochant cette case, j'accepte les conditions générales utilisateur</label>
+            <br />
+
+            <!-- BOUTON D'ENVOI-->
+            <button type="submit"> Envoyer mon formulaire</button>
+        </form>
+    </section>
+
+
+
+    <!-- DEUXIEME SECTION : LES BOUTONS-->
+    <section>
+        <h2> Des p'tits boutons pour cliquer comme des malades !</h2>
+
+        <!-- BOUTON INUTILE -->
+        <button type="button"> Un bouton qui sert à R</button>
+
+        <!-- BOUTON REINITIALISATION : pour ça, on ajoute un ID au formulaire ci dessus-->
+        <button type="reset" form="monFormulaireContact"> Reset</button>
+
+        <!-- UN LIEN VERS UN NOUVEL ONGLET -->
+        <a href="https://google.fr" target="_blank"> Un clic vers google </a>
+
+        <!--UN BOUTON QUI REDIRIGE VERS UN SITE WEB-->
+        <!-- Ici, il faut ruser... utilisation d'un form... -->
+        <form action="https://google.fr" method="get">
+            <button type="submit"> Un bouton qui redirige</button>
+        </form>
+    </section>
+
+
+    <!-- TROISIEME SECTION : UN APERCU D'ARTICLE-->
+    <section>
+        <!-- TOUJOURS UN TITRE DE SECTION EN H2 POUR RESTER COHÉRENT-->
+        <h2> Écrit des articles, tu deviendras journaliste !</h2>
+
+        <article>
+            <!-- un titre d'article en h3 : on descend ainsi d'un niveau et on respecte la hiérarchie des titres -->
+            <h3> Mon premier article </h3>
+            <p> J'ai pas d'inspiration pour l'article, alors je vais utiliser du lorem ipsum</p>
+            <a href="./pages/article.html"> LIRE LA SUITE </a>
+        </article>
+
+
+        <article>
+            <h3> Les notes sont tombées ! </h3>
+            <p> Le conseil de classe s'est réuni. Croyez-moi les gars, y'a du dégât !</p>
+            <a href="./pages/tableau.html"> Pour consulter les notes, cliquez-ici</a>
+        </article>
+    </section>
+
+
+    <!-- UN FOOTER -->
+    <footer>
+    </footer>
+</body>
+
+</html>
